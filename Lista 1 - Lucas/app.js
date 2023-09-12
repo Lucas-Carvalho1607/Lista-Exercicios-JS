@@ -87,46 +87,42 @@ alert ("Cálculo de combustivel");
 
 
 
- function exercicio7 () {
-   alert ("Calculadora");
-   
-   var numero1 = prompt("Digite um número");
-   var numero2 = prompt("Digite outro número");
-   var opcao = prompt("Escolha a operação: \n1.Soma \n2.Subtração \n3.Divisão \n4.Multiplicação");
-   
-   
-   while (opcao != 1 || opcao != 2 ||opcao != 3 || opcao != 4) {
-      alert("Essa opção não existe, escolha novamente");
-   
-      var numero1 = prompt("Digite um número");
-      var numero2 = prompt("Digite outro número");
-      var opcao = prompt("Escolha a operação: \n1.Soma \n2.Subtração \n3.Divisão \n4.Multiplicação");
-   
-      if (opcao == 1) {
-         var soma = parseInt(numero1) + parseInt(numero2);
-         alert(`O resultado da soma é: ${soma}`);
-         break;
+    
+   function exercicio7 () {
+      alert ("Calculadora");
+      
+      let numero1 = parseFloat(prompt("Digite um número"));
+      let numero2 = parseFloat(prompt("Digite outro número"));
+      let opcao = prompt("Escolha a operação: \n1.Soma + \n2.Subtração - \n3.Divisão  / \n4.Multiplicação * ");
+      let resultado;
+      
+        
+         switch (opcao) {
+            case "1":
+               resultado = numero1 + numero2;
+               alert(`Resultado da soma é ${resultado}`)
+               break;
          
+               case "2":
+                resultado  = numero1 - numero2;
+                  alert(`Resultado da subtração é ${resultado}`)
+                  break;
+   
+                  case "3":
+                     resultado = numero1 / numero2;
+                     alert(`Resultado da divisão é ${resultado}`)
+                     break;
+                     
+                     case "4":
+                        resultado = numero1 * numero2;
+                        alert(`Resultado da divisão é ${resultado}`)
+                        break;
          
-      }else if (opcao == 2) {
-         var sub = numero1 - numero2;
-         alert(`O resultado da subtração é: ${sub}`);
-            break;
-         
-      }else if (opcao == 3) {
-         var div = numero1 / numero2;
-         alert(`O resultado da divisão é: ${div}`);
-            break;
-         
-      }else {
-         (opcao == 4)
-         var mult = numero1 * numero2;
-         alert (`O resultado da multiplicação é: ${mult}`);
-         break;
+                        default:
+                           alert("Essa opção não existe");
+         }
       }
-      }
-      }
-
+   
 
 
 exercicio7()
